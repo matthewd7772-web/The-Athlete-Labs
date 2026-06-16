@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home-based AI Data Center Solutions - Lower costs, enterprise-grade AI infrastructure for your business">
+    <title>Home AI Data Center | Enterprise AI Infrastructure at Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066ff;
+            --secondary: #00d9ff;
+            --dark: #0a0e27;
+            --light: #f0f4ff;
+            --text: #1a1f3a;
+            --border: #e0e6ff;
+            --success: #00c853;
+            --warning: #ff9800;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: white;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,102,255,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a2047 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-primary {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        .hero .btn-primary:hover {
+            background: #00b8d4;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 32px rgba(0,102,255,0.15);
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Problem/Solution Section */
+        .problem-section {
+            background: var(--light);
+        }
+
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .problem-solution h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-list {
+            list-style: none;
+        }
+
+        .problem-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #666;
+        }
+
+        .problem-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .solution-list li:before {
+            content: "✓";
+            color: var(--success);
+        }
+
+        /* Features Section */
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: var(--light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 40px rgba(0,102,255,0.2);
+            transform: translateY(-8px);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(to bottom, white, var(--light));
+        }
+
+        .pricing-card.featured::before {
+            content: "POPULAR";
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .price-period {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            color: #666;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* ROI Calculator */
+        .calculator-section {
+            background: white;
+        }
+
+        .calculator {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
+        }
+
+        .result-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            margin-top: 1rem;
+        }
+
+        .result-label {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.95);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        footer h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.75rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .problem-solution {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta > * {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">🏢 HomeAI DataCenter</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Enterprise AI Infrastructure for Your Home</h1>
+            <p>Run AI workloads at 60% lower costs with residential-grade data center infrastructure. No cloud vendor lock-in. Full control.</p>
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule Demo</button>
+                <button class="btn-secondary" onclick="document.getElementById('proposal').scrollIntoView({behavior:'smooth'})">View Proposal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 style="text-align: center;">The Problem with Traditional Cloud AI</h2>
+            <div class="problem-solution">
+                <div>
+                    <h3>Current Challenges</h3>
+                    <ul class="problem-list solution-list">
+                        <li>$500K+ annual AWS/GCP bills for sustained AI workloads</li>
+                        <li>Unpredictable, usage-based pricing models</li>
+                        <li>Vendor lock-in with proprietary ML frameworks</li>
+                        <li>5-20ms latency for real-time inference</li>
+                        <li>Limited compute scaling without massive capital</li>
+                        <li>Data privacy concerns with cloud storage</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Our Solution</h3>
+                    <ul class="problem-list">
+                        <li>Fixed $300-400K one-time investment, zero recurring costs</li>
+                        <li>Predictable economics with no surprise bills</li>
+                        <li>Full portability—run any open-source model</li>
+                        <li>&lt;1ms latency with on-premise inference</li>
+                        <li>Linear scaling with additional units</li>
+                        <li>100% data sovereignty—air-gapped if needed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align: center;">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to run production AI workloads at home</p>
+            <div class="grid grid-3">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Enterprise GPU Power</h3>
+                    <p>8× A100/H100 GPUs delivering 640+ TFLOPS for parallel processing of large language models</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Complete Privacy</h3>
+                    <p>Air-gappable architecture with no mandatory cloud connectivity—full HIPAA/PCI compliance</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Turnkey Setup</h3>
+                    <p>Pre-configured with CUDA, vLLM, LangChain stacks. Deploy models in hours, not weeks</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Web dashboard with GPU utilization, temperature, power consumption, and job queues</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h3>REST API</h3>
+                    <p>OpenAI-compatible API for seamless model swaps from any application</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h3>Modular Scaling</h3>
+                    <p>Stack multiple units to scale inference or training without architectural redesign</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 style="text-align: center;">How It Works</h2>
+            <p class="section-subtitle">Four simple steps to launch your AI infrastructure</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Installation</h4>
+                    <p>We install the 10×10×6 unit in your home office, garage, or basement. Requires 240V, 50A circuit. Full environmental monitoring included.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Configuration</h4>
+                    <p>Our team remotely configures your environment, loads base models (Llama, Mistral, Stable Diffusion), and optimizes for your workload.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Integration</h4>
+                    <p>Connect via REST API (OpenAI-compatible) or Python SDK. Run existing cloud AI code with a single endpoint change.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Optimize & Scale</h4>
+                    <p>Monitor via web dashboard. Stack additional units for training. We handle firmware updates and model library expansion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi-calculator">
+        <div class="container">
+            <h2 style="text-align: center;">Calculate Your Savings</h2>
+            <div class="calculator">
+                <div class="form-group">
+                    <label>Monthly AI/ML Spend (AWS/GCP)</label>
+                    <input type="number" id="monthlySpend" placeholder="e.g., 50000" value="50000" oninput="calculateROI()">
+                </div>
+                <div class="form-group">
+                    <label>Years Until Payback (consider)</label>
+                    <input type="number" id="years" placeholder="e.g., 1" value="1" oninput="calculateROI()" min="1" max="10">
+                </div>
+                <button class="btn-primary" style="width: 100%;" onclick="calculateROI()">Calculate Savings</button>
+
+                <div id="result" style="display: none;">
+                    <div class="result-box">
+                        <div class="result-label">Annual Cloud Cost</div>
+                        <div class="result-value" id="cloudCost">$600,000</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Payback Period</div>
+                        <div class="result-value" id="payback">6.7 months</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">3-Year Savings</div>
+                        <div class="result-value" id="savings">$1,400,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 style="text-align: center;">Transparent Pricing</h2>
+            <p class="section-subtitle">One-time investment, no recurring cloud bills</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$280K</div>
+                    <div class="price-period">one-time</div>
+                    <ul class="pricing-features">
+                        <li>4× A100 GPUs (320 TFLOPS)</li>
+                        <li>256GB VRAM across GPUs</li>
+                        <li>2TB NVMe SSD storage</li>
+                        <li>50 concurrent API calls</li>
+                        <li>Email support</li>
+                        <li>Monthly firmware updates</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">$420K</div>
+                    <div class="price-period">one-time</div>
+                    <ul class="pricing-features">
+                        <li>8× A100 GPUs (640 TFLOPS)</li>
+                        <li>512GB VRAM across GPUs</li>
+                        <li>4TB NVMe SSD storage</li>
+                        <li>200 concurrent API calls</li>
+                        <li>24/7 phone & email support</li>
+                        <li>Custom model deployment</li>
+                        <li>Quarterly strategy reviews</li>
+                    </ul>
+                    <button class="btn-primary" style="width: 100%; background: var(--secondary); color: var(--dark);">Most Popular</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <div class="price-period">based on specs</div>
+                    <ul class="pricing-features">
+                        <li>Up to 16× H100 GPUs</li>
+                        <li>1TB+ VRAM configuration</li>
+                        <li>Up to 100TB storage</li>
+                        <li>Unlimited API calls</li>
+                        <li>Dedicated account manager</li>
+                        <li>Training & consulting included</li>
+                        <li>SLA: 99.5% uptime guarantee</li>
+                    </ul>
+                    <button class="btn-secondary" style="width: 100%;">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Included Services -->
+    <section style="background: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center;">What's Included</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>📦 Hardware</h3>
+                    <p><strong>8× A100 40GB GPUs</strong> with NVLink interconnect</p>
+                    <p><strong>Server-grade CPUs</strong> for preprocessing</p>
+                    <p><strong>High-speed networking</strong> with 400Gbps fabric</p>
+                    <p><strong>Redundant cooling</strong> and power management</p>
+                </div>
+                <div class="card">
+                    <h3>⚙️ Software</h3>
+                    <p><strong>CUDA 12.x</strong> fully optimized</p>
+                    <p><strong>vLLM, TorchServe, FastAPI</strong> pre-configured</p>
+                    <p><strong>Web dashboard</strong> with real-time monitoring</p>
+                    <p><strong>Auto-scaling API</strong> for burst workloads</p>
+                </div>
+                <div class="card">
+                    <h3>🔧 Installation & Setup</h3>
+                    <p><strong>Professional installation</strong> by certified technicians</p>
+                    <p><strong>Electrical assessment</strong> and circuit upgrade if needed</p>
+                    <p><strong>Network configuration</strong> for optimal throughput</p>
+                    <p><strong>Initial model deployment</strong> (Llama 2, Mistral, etc.)</p>
+                </div>
+                <div class="card">
+                    <h3>📞 Support & Training</h3>
+                    <p><strong>30-day onboarding</strong> program</p>
+                    <p><strong>24/7 technical support</strong> (professional tier)</p>
+                    <p><strong>Quarterly firmware updates</strong> with new models</p>
+                    <p><strong>Performance optimization</strong> consulting included</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Benefits -->
+    <section id="benefits">
+        <div class="container">
+            <h2 style="text-align: center;">Why Choose HomeAI DataCenter?</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>💰 Cost Leadership</h3>
+                    <p>60-70% lower total cost of ownership vs. AWS/GCP. Payback in 6-12 months. Zero recurring costs after initial investment.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 Performance</h3>
+                    <p>&lt;1ms latency for inference. No network hops. Direct GPU access for training jobs. Perfect for real-time AI applications.</p>
+                </div>
+                <div class="card">
+                    <h3>🔐 Security & Compliance</h3>
+                    <p>Air-gappable architecture. HIPAA, PCI-DSS ready. No data egress. Complete audit logs. Your data stays in-house.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Scalability</h3>
+                    <p>Stack multiple units for distributed training. Linear scaling. No architectural changes needed as workloads grow.</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 Time to Value</h3>
+                    <p>Deploy in hours, not months. Turnkey setup. No DevOps expertise required. Start inference immediately after installation.</p>
+                </div>
+                <div class="card">
+                    <h3>🔄 Portability</h3>
+                    <p>No vendor lock-in. Run open-source models. Easy migration from any cloud provider. Export data anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section style="background: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center;">Ideal Use Cases</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>🏥 Healthcare</h3>
+                    <p>Medical imaging analysis, patient data processing, diagnostic AI—all with HIPAA compliance and zero data exposure.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 Enterprise SaaS</h3>
+                    <p>White-label AI features, LLM-powered automation, real-time recommendation engines at fraction of cloud costs.</p>
+                </div>
+                <div class="card">
+                    <h3>🎓 Research</h3>
+                    <p>Academic ML research, large model fine-tuning, parameter optimization—with dedicated GPU resources.</p>
+                </div>
+                <div class="card">
+                    <h3>🏭 Manufacturing</h3>
+                    <p>Computer vision for quality control, predictive maintenance, real-time anomaly detection on plant floors.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Gaming & Media</h3>
+                    <p>Real-time neural rendering, NPC AI, content generation—all locally without cloud latency.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Financial Services</h3>
+                    <p>Trading algorithms, risk modeling, fraud detection—with air-gapped infrastructure for maximum security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Demo Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your AI Infrastructure?</h2>
+            <p>Schedule a personalized demo or consult with our infrastructure experts about your use case.</p>
+            <form id="contactForm" style="max-width: 500px; margin: 2rem auto;">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Company Name" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tell us about your AI workload" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; resize: vertical;" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; background: white; color: var(--primary); font-weight: 600;">Schedule Demo</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Business Proposal Embedded -->
+    <section id="proposal" style="background: var(--light); padding: 3rem 2rem;">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="text-align: center;">Business Proposal</h2>
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Executive Summary</h3>
+                <p>HomeAI DataCenter presents a revolutionary approach to enterprise AI infrastructure by bringing high-performance computing to your home or office. This proposal outlines the business opportunity, market potential, and implementation roadmap.</p>
+                <p style="margin-top: 1rem;"><a href="#" class="btn-secondary" style="display: inline-block;">Download Full PDF Proposal</a></p>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Market Opportunity</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Global AI Market:</strong> $1.8T by 2030 (CAGR 37%)</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Cloud GPU Market:</strong> $50B+ annual spend, growing 30%/year</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Untapped Segment:</strong> 300K+ enterprises seeking cost-effective, compliant AI infrastructure</li>
+                    <li style="padding: 0.75rem 0;"><strong>Total Addressable Market (TAM):</strong> $15B in annual alternative cloud spend</li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Revenue Model</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Hardware Sales:</strong> $280K–$420K per unit (gross margin 45%)</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Installation & Setup:</strong> $15K–$35K per site (gross margin 70%)</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);"><strong>Support Plans:</strong> 5–15% of hardware cost annually (gross margin 80%)</li>
+                    <li style="padding: 0.75rem 0;"><strong>Year 1 Forecast:</strong> 15 units sold = $4.5M revenue, $650K gross profit</li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Competitive Advantages</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">✓ 60% lower TCO vs. cloud providers</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">✓ Air-gappable, compliant architecture</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">✓ 6–12 month payback period</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">✓ Turnkey deployment vs. months of cloud migration</li>
+                    <li style="padding: 0.75rem 0;">✓ No vendor lock-in; runs any open-source model</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Specs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HomeAI DataCenter. All rights reserved. | Building the future of decentralized AI infrastructure.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateROI() {
+            const monthlySpend = parseFloat(document.getElementById('monthlySpend').value) || 0;
+            const years = parseInt(document.getElementById('years').value) || 1;
+
+            const annualCloudCost = monthlySpend * 12;
+            const investmentCost = 420000; // Professional tier
+            const monthlyHICost = 0; // No recurring costs
+
+            const paybackMonths = investmentCost / (monthlySpend + monthlyHICost/12);
+            const threeYearCloudCost = annualCloudCost * 3;
+            const threeYearHICost = investmentCost;
+            const savings = threeYearCloudCost - threeYearHICost;
+
+            document.getElementById('cloudCost').textContent = '$' + annualCloudCost.toLocaleString();
+            document.getElementById('payback').textContent = Math.round(paybackMonths) + ' months';
+            document.getElementById('savings').textContent = '$' + savings.toLocaleString();
+            document.getElementById('result').style.display = 'block';
+        }
+
+        // Calculate on page load
+        calculateROI();
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will contact you shortly to schedule a demo.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
